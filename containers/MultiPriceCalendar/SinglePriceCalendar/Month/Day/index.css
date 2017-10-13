@@ -1,0 +1,90 @@
+@import '../../../../../themes/default/variables.css';
+@import '../../../../../themes/default/mixins.css';
+
+.day {
+    position: relative;
+    display: inline-block;
+    min-width: 3.5em;
+    margin: 0 0.5em 0 0;
+    padding: 0;
+    border: 0 none;
+    background-color: transparent;
+}
+
+.graph {
+    position: relative;
+    height: 100px;
+}
+
+.graphMix {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    border: 0 none;
+    background-color: transparent;
+}
+
+.graphText {
+    color: var(--priceCalendarFillColor48);
+    text-align: center;
+    font-weight: bold;
+    margin: 0;
+    padding: 0 0 2px;
+    border: 0 none;
+    background-color: transparent;
+}
+
+.day:hover .graphText {
+    color: var(--priceCalendarSelectedGraphTextColor);
+}
+
+.graphFill {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border: 2px solid transparent;
+    background-color: var(--priceCalendarFillColor48);
+}
+
+.day:hover .graphFill {
+    background-color: var(--priceCalendarSelectedFillColor72);
+    border-top: 2px solid var(--priceCalendarSelectedFillColor);
+    border-left: 2px solid var(--priceCalendarSelectedFillColor);
+    border-right: 2px solid var(--priceCalendarSelectedFillColor);
+    border-bottom: 2px solid var(--priceCalendarSelectedFillColor72);
+}
+
+.dayweek {
+    margin: 0 0 4px;
+    padding: 0;
+    border: 2px solid transparent;
+}
+
+.day:hover .dayweek {
+    border-bottom: 2px solid var(--priceCalendarSelectedFillColor);
+    border-left: 2px solid var(--priceCalendarSelectedFillColor);
+    border-right: 2px solid var(--priceCalendarSelectedFillColor);
+    background-color: var(--priceCalendarSelectedFillColor16);
+}
+
+.dayText {
+    text-align: center;
+    margin: 0;
+    padding: 7px 0 0;
+    border: 0 none;
+    background-color: transparent;
+    font-size: 0.9rem;
+}
+
+.weekText {
+    text-align: center;
+    margin: -2px 0 2px 0;
+    padding: 0 0 5px;
+    border: 0 none;
+    background-color: transparent;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+}

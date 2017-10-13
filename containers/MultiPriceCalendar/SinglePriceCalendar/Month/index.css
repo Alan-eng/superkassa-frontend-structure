@@ -1,0 +1,99 @@
+@import '../../../../themes/default/variables.css';
+@import '../../../../themes/default/mixins.css';
+
+.month {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    border: 0 none;
+    background-color: transparent;
+}
+
+.days {
+    position: relative;
+    white-space: nowrap;
+    min-width: 3.5em;
+    margin: 0 1em 0 0;
+    padding: 0;
+    border: 0 none;
+    background-color: transparent;
+}
+
+.monthCaption {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-direction: normal;
+    -moz-box-direction: normal;
+    -webkit-box-orient: horizontal;
+    -moz-box-orient: horizontal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: start;
+    -moz-box-pack: start;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -webkit-align-content: stretch;
+    -ms-flex-line-pack: stretch;
+    align-content: stretch;
+    -webkit-box-align: start;
+    -moz-box-align: start;
+    -webkit-align-items: flex-start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    background-color: transparent;
+    padding: 0;
+    margin: 0;
+    border: 0 none;
+}
+
+.monthCaptionText {
+    -webkit-box-ordinal-group: 1;
+    -moz-box-ordinal-group: 1;
+    -webkit-order: 0;
+    -ms-flex-order: 0;
+    order: 0;
+    -webkit-box-flex: 0;
+    -moz-box-flex: 0;
+    -webkit-flex: 0 1 auto;
+    -ms-flex: 0 1 auto;
+    flex: 0 1 auto;
+    -webkit-align-self: flex-start;
+    -ms-flex-item-align: start;
+    align-self: flex-start;
+    background-color: transparent;
+    margin: 0;
+    border: 0 none;
+    padding: 0 0.5rem;
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    line-height: 0.7em;
+}
+
+.monthCaptionLine {
+    -webkit-box-ordinal-group: 2;
+    -moz-box-ordinal-group: 2;
+    -webkit-order: 1;
+    -ms-flex-order: 1;
+    order: 1;
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    -webkit-flex: 1 0 auto;
+    -ms-flex: 1 0 auto;
+    flex: 1 0 auto;
+    -webkit-align-self: flex-start;
+    -ms-flex-item-align: start;
+    align-self: flex-start;
+    background-color: transparent;
+    height: 0.2rem;
+    border: 0 none;
+    border-bottom: 1px solid var(--priceCalendarFillColor72);
+    padding: 0;
+    margin: 0;
+    font-size: 0.7rem;
+    line-height: 0.7em;
+}

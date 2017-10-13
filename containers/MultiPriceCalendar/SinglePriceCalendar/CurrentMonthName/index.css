@@ -1,0 +1,7 @@
+.currentMonthName {
+    position: absolute;
+    bottom: 0;
+    font-size: 0.8rem;
+    line-height: 0.7em;
+    text-transform: uppercase;
+}

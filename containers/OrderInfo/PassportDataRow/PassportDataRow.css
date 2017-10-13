@@ -1,0 +1,47 @@
+.wrapper {
+    padding-left: 32px;
+    padding-right: 32px;
+    padding-bottom: 42px;
+    padding-top: 42px;
+}
+.title {
+    margin: 0;
+    font-weight: 300;
+    text-align: left;
+    font-size: 28px;
+    color: #003267;
+}
+.subTitle {
+    font-weight: 300;
+    text-align: left;
+    font-size: 18px;
+    color: #003267;
+}
+.flexContainerTitle {
+    margin-bottom: 20px;
+    justify-content: space-between;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.flexContainer {
+    margin-bottom: 2px;
+    justify-content: space-between;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.link {
+    color: #003267;
+    margin-left: 5px;
+}
+.linkContainer {
+    display: flex;
+    align-items: center;
+}
+.note {
+    margin-top: 14px;
+    font-size: 14px;
+    color: #55769C;
+    text-align: right;
+}

@@ -1,0 +1,26 @@
+.wrapper {
+    padding-left: 32px;
+    padding-right: 32px;
+    padding-top: 42px;
+}
+.flexContainer {
+    justify-content: space-between;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.title {
+    margin: 0;
+    margin-bottom: 20px;
+    font-weight: 300;
+    text-align: left;
+    font-size: 28px;
+    color: #003267;
+}
+.note {
+    flex: 1;
+    color: #003267;
+    font-size: 14px;
+    text-align: left;
+    margin-left: 20px;
+}
