@@ -1,0 +1,14 @@
+[ignore]
+.*/dist
+.*/public
+.*/node_modules/sk.react.ui/.*
+.*/node_modules/stylelint/.*
+
+[include]
+
+[libs]
+flow-typed
+
+[options]
+module.system.node.resolve_dirname=node_modules
+module.system.node.resolve_dirname=src

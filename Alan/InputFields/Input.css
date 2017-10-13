@@ -1,0 +1,56 @@
+.wrapper{
+    position: relative;
+    flex: 1;
+    border-radius: 0 0 3px 0;
+    background: #FFFFFF;
+    margin-left: 2px;
+}
+
+/* для компонента Input Bonuses */
+.wrapperFixed{
+    position: relative;
+    width: 270px;
+    border-radius: 3px;
+    background: #FFFFFF;
+    margin-left: 2px;
+}
+/* ---------------------------------------- */
+/* для компонента DateOfBirth */
+.wrapperSmall{
+    border-radius: 0px 0px 0px 3px;
+    position: relative;
+    flex: 0.6;
+    background: #FFFFFF;
+}
+/* ---------------------------------------- */
+.styledInput{
+    height: 64px;
+    box-sizing: border-box;
+    width: 100%;
+    border: none;
+    font-size: 16px;
+    color: #0F3166;
+    padding-left: 10px;
+    padding-top: 15px;
+    position: relative;
+    background: none;
+    z-index: 1;
+}
+.label{
+    color: #9BADC2;
+    position: absolute;
+    top: 36px;
+    left: 10px;
+    transition: all .2s ease-out;
+    text-align: left;
+}
+/* для компонента ArrivalTable */
+        .labelUpper{
+            color: #9BADC2;
+            position: absolute;
+            top: 18px;
+            left: 10px;
+            transition: all .2s ease-out;
+            text-align: left;
+        }
+/* ---------------------------------------- */

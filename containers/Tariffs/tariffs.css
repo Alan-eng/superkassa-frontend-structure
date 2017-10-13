@@ -1,0 +1,44 @@
+@import '../../themes/default/variables.css';
+
+.root {
+    margin-left: 5vw;
+
+    @media (--only-desktop-medium-screen) {
+        margin-left: 15vw;
+    }
+
+    @media (--only-desktop-large-screen) {
+        margin-left: 25vw;
+    }
+
+    @media (--only-mobile-screen) {
+        margin: 0 5vw;
+    }
+}
+
+.submitButtonWrapper {
+    margin-top: 30px;
+    text-align: center;
+}
+
+button.submitButton {
+    margin-left: -1.25vw;
+    padding-left: 78px;
+    padding-right: 78px;
+    text-transform: uppercase;
+
+    @media (--only-desktop-medium-screen) {
+        margin-left: -7.5vw;
+    }
+
+    @media (--only-desktop-large-screen) {
+        margin-left: -12.5vw;
+    }
+
+    @media (--only-mobile-screen) {
+        font-size: 1.125rem;
+        margin: 0 auto;
+        padding: 18px 0;
+        width: 90vw;
+    }
+}

@@ -1,0 +1,20 @@
+{
+    "env": {
+        "browser": true,
+        "node": true
+    },
+    "parser": "babel-eslint",
+    "extends": "airbnb",
+    "globals": {
+        "__DEV__": true,
+        "__SERVER__": true
+    },
+    "rules": {
+        "indent": ["error", 4, { "SwitchCase": 1 }],
+        "react/jsx-indent": [2, 4],
+        "react/jsx-indent-props": [2, 4],
+        "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+        "import/no-extraneous-dependencies": "off",
+        "no-console": ["error", { "allow": ["warn", "error", "info"] }]
+    }
+}

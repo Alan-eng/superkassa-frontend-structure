@@ -1,0 +1,51 @@
+@import '../../themes/default/variables.css';
+
+.root {
+    color: var(--brandTextColor);
+    margin-bottom: 0;
+    text-align: center;
+}
+
+.title {
+    font-size: 1.5rem;
+    margin: 0 0 32px;
+    text-align: center;
+
+    @media (max-width: 463px) {
+        font-size: 1.3rem;
+    }
+}
+
+.inputRow {
+    margin-bottom: 5px;
+}
+
+.error {
+    color: var(--errorColor);
+}
+
+.success {
+    color: var(--successColor);
+}
+
+.submitBtn {
+    display: block;
+    width: 100%;
+    margin-bottom: 24px;
+}
+
+.recoverPwdLink {
+    font-size: 1.125rem;
+    color: color(var(--brandColorDark) alpha(64%));
+    text-decoration: none;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.closeButton {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+}

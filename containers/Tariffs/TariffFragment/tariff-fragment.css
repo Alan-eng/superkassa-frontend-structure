@@ -1,0 +1,161 @@
+@import '../../../themes/default/variables.css';
+@import '../../../themes/default/mixins.css';
+
+.root {
+    @mixin unstyledList;
+
+    align-items: flex-start;
+    background: #fff;
+    border-radius: var(--tariffsBorderRadius) 0 0 var(--tariffsBorderRadius);
+    box-shadow: 0 0 4px 0 color(var(--brandColorLight) a(8%));
+    display: inline-flex;
+    flex-direction: column;
+    min-height: 265px;
+    position: relative;
+    justify-content: space-between;
+
+    &::before {
+        content: '';
+        border-left: 2px dashed var(--tariffRouteLineColor);
+        position: absolute;
+        top: 5px;
+        left: 26px;
+        width: 0;
+        height: calc(100% + 10px);
+
+        @media (--only-mobile-screen) {
+            display: none;
+        }
+    }
+
+    &::after {
+        content: '';
+        background: var(--tariffRouteLineColor);
+        position: absolute;
+        top: 30px;
+        left: 26px;
+        width: 2px;
+        height: calc(100% - 5pc);
+
+        @media (--only-mobile-screen) {
+            display: none;
+        }
+    }
+
+    @media (--only-mobile-screen) {
+        border-radius: var(--tariffsBorderRadius);
+        min-height: 0;
+        width: 90vw;
+    }
+}
+
+.departure,
+.arrival {
+    @mixin flexParent row, space-between;
+
+    padding: 0 40px 8px var(--tariffInfoElementPadding);
+    width: var(--tariffSegmentWidth);
+
+    @media (--only-mobile-screen) {
+        width: 90vw;
+        padding: 0 16px;
+    }
+}
+
+.departure {
+    padding-top: 1pc;
+}
+
+.arrival {
+    padding-bottom: 25px;
+}
+
+.stop {
+    margin-top: -20px;
+    padding: 1pc 40px 8px var(--tariffInfoElementPadding);
+    width: var(--tariffSegmentWidth);
+
+    @media (--only-mobile-screen) {
+        margin-top: 0;
+        padding: 0 16px;
+        width: 90vw;
+    }
+}
+
+.tariffsWrapper {
+    margin-left: var(--tariffSegmentWidth);
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+
+    @media (--only-mobile-screen) {
+        height: auto;
+        margin-left: 0;
+        position: relative;
+        width: 100%;
+        z-index: 100;
+    }
+}
+
+.tariffs {
+    @mixin flexParent row, flex-start, stretch;
+    @mixin unstyledList;
+
+    box-shadow: 0 0 4px 0 color(var(--brandColorLight) a(8%));
+    height: 100%;
+
+    @media (--only-mobile-screen) {
+        box-shadow: none;
+        display: block;
+        height: auto;
+    }
+
+    & .tariff:last-child label {
+        border-top-right-radius: var(--tariffsBorderRadius);
+        border-bottom-right-radius: var(--tariffsBorderRadius);
+        overflow: hidden;
+
+        @media (--only-mobile-screen) {
+            border-radius: 0 0 var(--tariffsBorderRadius) var(--tariffsBorderRadius);
+        }
+    }
+}
+
+.tariff {
+    border-left: 2px dashed var(--tariffRouteLineColor);
+    position: relative;
+    width: var(--tariffBrandWidth);
+
+    &::before,
+    &::after {
+        content: '';
+        border-radius: 50%;
+        background: var(--tariffPageBgColor);
+        position: absolute;
+        left: -8px;
+        width: 1pc;
+        height: 1pc;
+        z-index: 110;
+    }
+
+    &::before {
+        top: -8px;
+    }
+
+    &::after {
+        bottom: -8px;
+    }
+
+    @media (--only-mobile-screen) {
+        border-top: 2px dashed var(--tariffRouteLineColor);
+        border-left: none;
+        width: 100%;
+
+        &::after {
+            top: -8px;
+            right: -8px;
+            left: auto;
+        }
+    }
+}

@@ -1,0 +1,39 @@
+@import '../../../../themes/default/variables.css';
+
+.airport {
+    font-size: 1.125rem;
+    line-height: 1.2em;
+    margin: 0;
+    padding: 0;
+    position: relative;
+
+    @media (--only-mobile-screen) {
+        font-size: 1rem;
+        margin-right: 8px;
+    }
+
+    &::before {
+        content: '';
+        background-color: var(--tariffRouteLineColor);
+        border-radius: 50%;
+        position: absolute;
+        top: 8px;
+        left: -35px;
+        height: 10px;
+        width: 10px;
+
+        @media (--only-mobile-screen) {
+            display: none;
+        }
+    }
+}
+
+.iata {
+    opacity: 0.48;
+}
+
+.city {
+    display: block;
+    font-size: 0.75rem;
+    line-height: 1.2em;
+}

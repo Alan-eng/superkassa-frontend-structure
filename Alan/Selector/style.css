@@ -1,0 +1,82 @@
+.selector {
+    background-color: white;
+    color: #003267;
+    margin: 0;
+    position: relative;
+    padding: 0;
+    border: 0;
+    font-size: 1rem;
+    line-height: 1.2em;
+}
+
+.arrow {
+    position: absolute;
+    padding: 0 16px;
+    top: 1.5rem;
+    right: 0;
+}
+
+.disabledarrow {
+    position: absolute;
+    padding: 0 16px;
+    top: 1.5rem;
+    right: 0;
+    opacity: 0.5;
+}
+
+.leftSide {
+    margin: 0 44px 0 0;
+    padding: 0;
+    border: 0;
+}
+
+
+.label {
+    opacity: 0.5;
+    padding: 8px;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.text {
+    padding: 0 8px 8px;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.disabledtext {
+    padding: 0 8px 8px;
+    overflow: hidden;
+    white-space: nowrap;
+    opacity: 0.5;
+}
+
+.command {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    background-color: transparent;
+    color: transparent;
+    cursor: pointer;
+    width: 100%;
+}
+
+.disabledcommand {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    background-color: transparent;
+    color: transparent;
+    cursor: not-allowed;
+    width: 100%;
+}

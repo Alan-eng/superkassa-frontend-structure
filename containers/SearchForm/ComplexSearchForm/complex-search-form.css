@@ -1,0 +1,137 @@
+@import '../../../themes/default/variables.css';
+@import '../../../themes/default/mixins.css';
+
+.root {
+    margin: 0 auto;
+    max-width: 1280px;
+    padding-bottom: 64px;
+    position: relative;
+
+    &.hasErrors {
+        border-top-color: var(--errorColor);
+
+        @media (--only-mobile-screen) {
+            border-top-color: transparent;
+        }
+    }
+}
+
+.row {
+    @mixin flexParent row, center, stretch;
+
+    border-top: 2px solid transparent;
+    flex-wrap: nowrap;
+    position: relative;
+
+    & > * {
+        margin-bottom: 3px;
+    }
+
+    @media (--only-mobile-screen) {
+        flex-direction: column;
+        margin-bottom: 13px;
+        padding-right: 0;
+    }
+}
+
+.origin,
+.destination {
+    flex-basis: 50%;
+
+    @media (--only-mobile-screen) {
+        flex-basis: auto;
+    }
+}
+
+.originInput input,
+.destinationInput input {
+    border: none;
+    border-radius: 0;
+    border-right: 1px solid var(--inputBorderColor);
+}
+
+button.submitButton {
+    border: 1px solid #fff;
+    border-radius: 0;
+    flex-basis: 33%;
+    margin-right: 1px;
+
+    &:focus {
+        outline: 0;
+    }
+
+    @media (--only-mobile-screen) {
+        flex-basis: auto;
+    }
+}
+
+button.addSegmentButton {
+    background: color(#fff a(16%));
+    border: none;
+    border-right: 1px solid var(--inputBorderColor);
+    flex-basis: 73%;
+
+    &:focus {
+        outline: 0;
+    }
+
+    @media (--only-tablet-screen) {
+        font-size: 0.875rem;
+    }
+
+    @media (--only-mobile-screen) {
+        border: none;
+        flex-basis: auto;
+        font-size: 0.875rem;
+        margin: -13px 0 16px;
+    }
+}
+
+.error {
+    @mixin panel;
+
+    background: var(--errorColor);
+    border-radius: var(--baseBorderRadius) var(--baseBorderRadius) 0 0;
+    color: #fff;
+    position: absolute;
+    bottom: calc(100% - 2px);
+    right: 0;
+
+    @media (--only-mobile-screen) {
+        border-radius: 0;
+        bottom: 139px;
+        right: 1px;
+        width: calc(100% - 1px);
+    }
+}
+
+.changeFormTypeBtn {
+    @mixin flexParent row, center, stretch;
+    @mixin unstyledButton;
+
+    color: #fff;
+    opacity: 0.72;
+    position: absolute;
+    top: calc(100% - 48px);
+    left: 0;
+
+    &:hover {
+        opacity: 1;
+    }
+
+    & img {
+        margin-right: 16px;
+    }
+
+    & span {
+        text-decoration: underline;
+    }
+}
+
+.removeSegmentButton {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 24px;
+    height: 24px;
+}

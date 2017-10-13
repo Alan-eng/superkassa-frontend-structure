@@ -1,0 +1,25 @@
+@import '../../../../themes/default/variables.css';
+
+.root {
+    color: color(var(--baseTextColor) a(60%));
+    font-size: 0.875rem;
+    font-style: italic;
+    line-height: 1.2em;
+    margin-bottom: 1pc;
+    padding-left: var(--tariffInfoElementPadding);
+    width: var(--tariffSegmentWidth);
+
+    & time {
+        display: block;
+    }
+
+    @media (--only-mobile-screen) {
+        margin-top: 1pc;
+        padding-left: 16px;
+        width: 100%;
+    }
+}
+
+.carrierName {
+    color: color(var(--colorBlue) a(88%));
+}

@@ -1,0 +1,82 @@
+@import '../../themes/default/variables.css';
+@import '../../themes/default/mixins.css';
+
+.root {
+    @mixin flexParent row, center, stretch;
+
+    border-top: 2px solid transparent;
+    flex-wrap: nowrap;
+    margin: 0 auto;
+    max-width: 1280px;
+    position: relative;
+
+    & > * {
+        margin-bottom: 3px;
+    }
+
+    @media (--only-tablet-screen) {
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    @media (--only-mobile-screen) {
+        flex-direction: column;
+    }
+
+    &.hasErrors {
+        border-top-color: var(--errorColor);
+
+        @media (--only-mobile-screen) {
+            border-top-color: transparent;
+        }
+    }
+}
+
+.origin,
+.destination {
+    flex-basis: 50%;
+
+    @media (--only-mobile-screen) {
+        flex-basis: auto;
+    }
+}
+
+.originInput input,
+.destinationInput input {
+    border: none;
+    border-radius: 0;
+    border-right: 1px solid var(--inputBorderColor);
+}
+
+button.submitButton {
+    border: 1px solid #fff;
+    border-radius: 0;
+    flex-basis: 33%;
+    margin-right: 1px;
+
+    &:focus {
+        outline: 0;
+    }
+
+    @media (--only-mobile-screen) {
+        flex-basis: auto;
+    }
+}
+
+.error {
+    @mixin panel;
+
+    background: var(--errorColor);
+    border-radius: var(--baseBorderRadius) var(--baseBorderRadius) 0 0;
+    color: #fff;
+    position: absolute;
+    bottom: calc(100% - 2px);
+    right: 0;
+
+    @media (--only-mobile-screen) {
+        border-radius: 0;
+        bottom: 80px;
+        right: 1px;
+        width: calc(100% - 1px);
+    }
+}

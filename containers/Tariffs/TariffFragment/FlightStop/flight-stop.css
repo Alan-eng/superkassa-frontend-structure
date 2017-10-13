@@ -1,0 +1,49 @@
+@import '../../../../themes/default/variables.css';
+
+.root {
+    background: var(--tariffStopBgColor);
+    border-radius: var(--baseBorderRadius);
+    display: block;
+    font-size: 0.75rem;
+    margin-left: -9pt;
+    padding: 5px 9px;
+    position: relative;
+
+    @media (--only-mobile-screen) {
+        margin-left: 0;
+    }
+
+    &::before,
+    &::after {
+        content: '';
+        margin: auto;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        z-index: 1;
+
+        @media (--only-mobile-screen) {
+            display: none;
+        }
+    }
+
+    &::before {
+        background: #fff;
+        border: 2px solid var(--tariffRouteLineColor);
+        border-radius: 50%;
+        left: -24px;
+        width: 8px;
+        height: 8px;
+    }
+
+    &::after {
+        background: var(--tariffRouteLineColor);
+        left: -9pt;
+        width: 9pt;
+        height: 2px;
+    }
+
+    & time {
+        white-space: nowrap;
+    }
+}

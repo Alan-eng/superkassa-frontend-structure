@@ -1,0 +1,6 @@
+{
+    "name": "RecoverPasswordForm",
+    "version": "0.0.0.0",
+    "private": true,
+    "main": "./RecoverPasswordForm.js"
+}

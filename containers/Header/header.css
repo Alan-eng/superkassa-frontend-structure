@@ -1,0 +1,21 @@
+@import '../../themes/default/variables.css';
+
+.root {
+    padding: 2.5vh var(--gridGutter);
+    color: var(--baseLightTextColor);
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.logo {
+    min-width: 140px;
+    width: 8vw;
+    height: auto;
+
+    @media (--only-mobile-screen) {
+        max-width: 180px;
+        width: 40vw;
+    }
+}

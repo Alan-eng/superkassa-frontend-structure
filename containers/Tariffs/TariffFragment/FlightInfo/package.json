@@ -1,0 +1,6 @@
+{
+    "name": "FlightInfo",
+    "private": true,
+    "version": "0.0.0.0",
+    "main": "FlightInfo.js"
+}

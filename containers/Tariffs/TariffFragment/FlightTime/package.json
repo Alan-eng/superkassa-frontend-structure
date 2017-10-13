@@ -1,0 +1,6 @@
+{
+    "name": "FlightTime",
+    "private": true,
+    "version": "0.0.0.0",
+    "main": "FlightTime.js"
+}

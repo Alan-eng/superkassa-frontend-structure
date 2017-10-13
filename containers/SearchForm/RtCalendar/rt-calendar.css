@@ -1,0 +1,38 @@
+@import '../../../themes/default/mixins.css';
+
+.root {
+    display: flex;
+    flex-basis: 33.2%;
+    margin-right: 1px;
+    position: relative;
+
+    @media (--only-mobile-screen) {
+        flex-basis: auto;
+    }
+}
+
+.formTypeSelect {
+    justify-content: flex-start;
+    margin-bottom: 8px;
+
+    & li {
+        margin: 0 16px;
+    }
+
+    @media (--only-mobile-screen) {
+        justify-content: center;
+    }
+}
+
+.labeledButton {
+    @mixin labeledButton;
+    @mixin hasDropDown;
+
+    min-width: 195px;
+    min-height: 78px;
+    width: 100%;
+}
+
+.noActive {
+    font-size: 1rem;
+}

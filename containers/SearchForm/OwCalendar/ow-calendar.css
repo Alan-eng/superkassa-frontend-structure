@@ -1,0 +1,30 @@
+@import '../../../themes/default/mixins.css';
+
+.root {
+    display: flex;
+    flex-basis: 33.2%;
+    margin-right: 1px;
+    position: relative;
+
+    @media (--only-mobile-screen) {
+        flex-basis: auto;
+    }
+}
+
+.labeledButton {
+    @mixin labeledButton;
+    @mixin hasDropDown;
+
+    min-width: 195px;
+    min-height: 78px;
+    width: 100%;
+}
+
+.noActive {
+    font-size: 1rem;
+}
+
+.calendarDropDown {
+    left: auto;
+    right: 0;
+}

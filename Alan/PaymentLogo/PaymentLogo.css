@@ -1,0 +1,26 @@
+.container{
+    padding-top: 18px;
+    fontSize: 16px;
+    color: #254A78;
+    width: 128px;
+    height: 128px;
+    background-color: rgba(255, 255, 255, 0.4);
+    background: #EDF6FB;
+    border: 2px solid #CFEDF8;
+    box-sizing: border-box;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.containerChecked{
+    padding-top: 18px;
+    fontSize: 16px;
+    color: #254A78;
+    width: 128px;
+    height: 128px;
+    background-color: rgba(255, 255, 255, 0.4);
+    background: white;
+    border: 2px solid #79D3FC;
+    box-sizing: border-box;
+    border-radius: 4px;
+    cursor: pointer;
+}

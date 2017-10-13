@@ -1,0 +1,150 @@
+@import '../../../../themes/default/variables.css';
+
+.root {
+    cursor: pointer;
+    display: block;
+    height: 100%;
+
+    & input[type=radio] {
+        position: absolute;
+        clip-path: inset(100%);
+        clip: rect(0, 0, 0, 0);
+        overflow: hidden;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        border: 0;
+    }
+
+    & hr {
+        background: var(--tariffRouteLineColor);
+        border: none;
+        width: 5pc;
+        height: 2px;
+
+        @media (--only-mobile-screen) {
+            display: none;
+        }
+    }
+
+    @media (--only-mobile-screen) {
+        height: auto;
+        position: relative;
+    }
+}
+
+.brandInfo {
+    background: #fff;
+    height: 100%;
+
+    &.selected {
+        background: var(--tariffSelectedBrandBgColor);
+    }
+
+    & h4 {
+        color: color(var(--baseTextColor) a(78%));
+        font-size: 0.75rem;
+        font-weight: normal;
+        height: 55px;
+        margin: 0;
+        padding: 1pc 8px 0;
+        text-align: center;
+        overflow: hidden;
+        text-overflow: ellipsis;
+
+        @media (--only-mobile-screen) {
+            height: auto;
+            padding: 16px;
+            text-align: left;
+            width: 60%;
+        }
+    }
+
+    @media (--only-mobile-screen) {
+        height: auto;
+    }
+}
+
+.price {
+    color: color(var(--baseTextColor) a(78%));
+    font-size: 1rem;
+    font-weight: bold;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    text-align: center;
+
+    @media (--only-mobile-screen) {
+        line-height: 1em;
+        padding: 0;
+        position: absolute;
+        top: 16px;
+        right: 16px;
+    }
+}
+
+.infoList {
+    width: 5pc;
+    margin: 16px auto 0;
+
+    @media (--only-mobile-screen) {
+        @mixin flexParent row, space-around, baseline;
+
+        margin: 0;
+        padding: 0 16px;
+        width: 100%;
+    }
+}
+
+.options {
+    @mixin unstyledList;
+
+    font-size: 0.75rem;
+
+    @media (--only-mobile-screen) {
+        @mixin flexParent row, space-around;
+
+        flex-wrap: wrap;
+
+        & > li {
+            padding-right: 38px;
+        }
+    }
+}
+
+.luggage {
+    @mixin flexParent row, space-between, baseline;
+
+    margin-bottom: 16px;
+}
+
+.allow,
+.disallow {
+    position: relative;
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        display: block;
+        margin: auto;
+
+        @media (--only-mobile-screen) {
+            right: 16px;
+        }
+    }
+}
+
+.allow::after {
+    background-image: url(/static/images/allow.svg);
+    width: 9px;
+    height: 7px;
+}
+
+.disallow::after {
+    background-image: url(/static/images/disallow.svg);
+    width: 8px;
+    height: 8px;
+}

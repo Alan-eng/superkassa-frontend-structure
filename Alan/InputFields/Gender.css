@@ -1,0 +1,23 @@
+.wrapper{
+    border-radius: 3px 0px 0px 0px;
+    /* box-sizing: border-box; */
+    height: 64px;
+    position: relative;
+    flex: 0.6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #FFFFFF;
+}
+.btn{
+    padding: 10px;
+    border: none;
+    background: none;
+    outline: none;
+}
+.label{
+    padding: 10px;
+    border: none;
+    background: none;
+    outline: none;
+}
